@@ -2,8 +2,8 @@ pipeline{
     agent any
 
     tools {
-         maven 'maven'
-         jdk 'java'
+         maven 'MAVEN'
+         jdk 'JDK22'
     }
 
     stages{
@@ -14,7 +14,7 @@ pipeline{
         }
         stage('build'){
             steps{
-               bat 'mvn package'
+               sh 'mvn package'
             }
         }
     }
